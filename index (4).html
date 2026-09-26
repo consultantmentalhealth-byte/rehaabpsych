@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rehaab Psych | Coming soon</title>
+<meta name="description" content="Rehaab Psych, mental health consultation. Our website is on its way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #E9F0EC;
+    --ink: #1D3534;
+    --soft: #4F6664;
+    --calm: #9FBFB3;
+    --dusk: #7E6E9C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #142221;
+      --ink: #E4EDE9;
+      --soft: #A7BAB5;
+      --calm: #2F4F49;
+      --dusk: #B3A5CF;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 2rem 1.5rem;
+    overflow: hidden;
+  }
+  .breath {
+    position: fixed;
+    width: min(70vmin, 520px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--calm) 0%, transparent 70%);
+    opacity: .7;
+    animation: breathe 10s ease-in-out infinite;
+    z-index: 0;
+  }
+  @keyframes breathe {
+    0%, 100% { transform: scale(.82); }
+    50% { transform: scale(1.08); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .breath { animation: none; }
+  }
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 34rem;
+    text-align: center;
+  }
+  h1 {
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(2.8rem, 9vw, 5.2rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .lead {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--soft);
+  }
+  .contact {
+    margin-top: 2.25rem;
+    font-size: 1rem;
+    color: var(--soft);
+  }
+  .contact a {
+    color: var(--dusk);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .contact a:focus-visible {
+    outline: 2px solid var(--dusk);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="breath" aria-hidden="true"></div>
+  <main>
+    <h1>Rehaab Psych</h1>
+    <p class="lead">Mental health consultation. Our website is on its way.</p>
+    <!-- Change the email below to your real one, or delete this whole <p> line -->
+    <p class="contact">Reach us at <a href="mailto:hello@rehaabpsych.com">hello@rehaabpsych.com</a></p>
+  </main>
+</body>
+</html>
